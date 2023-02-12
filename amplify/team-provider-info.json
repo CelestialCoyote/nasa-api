@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-nasaapi2-dev-191415-authRole",
+      "UnauthRoleArn": "arn:aws:iam::115704115470:role/amplify-nasaapi2-dev-191415-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::115704115470:role/amplify-nasaapi2-dev-191415-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-nasaapi2-dev-191415-deployment",
+      "UnauthRoleName": "amplify-nasaapi2-dev-191415-unauthRole",
+      "StackName": "amplify-nasaapi2-dev-191415",
+      "StackId": "arn:aws:cloudformation:us-east-1:115704115470:stack/amplify-nasaapi2-dev-191415/2bedf660-a9ba-11ed-8977-129505a75707",
+      "AmplifyAppId": "d28s8e8w8maxgv"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.nasa-apod {
+    align-items: center;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 2.0em;
+}
+
+.nasa-apod-data {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+}
+
+.nasa-apod img,
+.nasa-apod iframe {
+    width: 50%;
+}
+
+.nasa-apod-data-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nasa-apod-title {
+    color: aqua;
+    font-size: 1.5rem;
+    margin: 1.0em;
+}
+
+.nasa-apod-date,
+.nasa-apod-explanation,
+.nasa-apod-credit {
+    color: aqua;
+    margin: 1.0em;
+}
+
+.nasa-apod-explanation {
+    display: flex;
+    flex-direction: column;
+    gap: 1.0em;
+}
