@@ -5,6 +5,26 @@ import './APOD.css';
 
 const apiKey = process.env.REACT_APP_NASA_KEY;
 
+
+// < !--Datepicker -->
+//     <div
+//         class="form-outline datepicker"
+//         data-mdb-toggle-button="true"
+//         data-mdb-format="yyyy-mm-dd"
+//         id="date-picker"
+//     >
+//         <input
+//             type="text"
+//             class="form-control"
+//             id="wrapper-date"
+//             data-mdb-toggle="datepicker"
+//             value=""
+//         />
+//         <label for="exampleDatepicker1" class="form-label"
+//         >Select a date</label
+//         >
+//     </div>
+
 // const DatePicker = () => {
 //     const [date, setDate] = useState('');
 //     const dateInputRef = useRef(null);
@@ -36,8 +56,8 @@ const APOD = () => {
     //.get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=2021-01-04&concept_tags=True`)
 
     useEffect(() => {
-         axios.get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
-        //axios.get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=2021-01-04`)
+        axios.get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
+            //axios.get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=2021-01-04`)
             .then(res => {
                 setPhotoData(res.data)
                 console.log(res.data);
