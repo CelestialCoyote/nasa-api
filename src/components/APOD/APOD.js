@@ -36,8 +36,8 @@ const APOD = () => {
     //.get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=2021-01-04&concept_tags=True`)
 
     useEffect(() => {
-        // axios.get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
-        axios.get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=2021-01-04`)
+         axios.get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
+        //axios.get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=2021-01-04`)
             .then(res => {
                 setPhotoData(res.data)
                 console.log(res.data);
