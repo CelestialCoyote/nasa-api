@@ -36,8 +36,13 @@ const APOD = () => {
     //.get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=2021-01-04&concept_tags=True`)
 
     useEffect(() => {
-        axios.get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
-            .then(res => { setPhotoData(res.data) });
+        // axios.get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`)
+        axios.get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=2021-01-04`)
+            .then(res => {
+                setPhotoData(res.data)
+                console.log(res.data);
+                console.log(res.data.media_type);
+            });
     }, []);
 
 
@@ -57,7 +62,10 @@ const APOD = () => {
                         (e) => {
                             setDate(e.target.value);
                             axios.get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${e.target.value}`)
-                                .then(res => { setPhotoData(res.data) });
+                                .then(res => {
+                                    setPhotoData(res.data)
+                                    console.log(res.data.media_type);
+                                });
                         }
                     }
                     ref={dateInputRef}
@@ -67,23 +75,26 @@ const APOD = () => {
             </div>
 
             <div className='nasa-apod-data'>
-                {photoData.media_type = 'image' ? (
-                    <img
-                        className='photo'
-                        src={photoData.url}
-                        alt={photoData.title}
-                    />
-                ) : (
-                    <iframe
-                        className='photo'
-                        title='space-video'
-                        src={photoData.url}
-                        gesture='media'
-                        typeof='text/html'
-                        allow='encrypted-media'
-                        allowFullscreen
-                    />
-                )};
+                {
+                    photoData.media_type = 'image' ? (
+                        <img
+                            className='photo'
+                            src={photoData.url}
+                            alt={photoData.title}
+                        />
+                    ) : (
+                        <iframe
+                            className='photo'
+                            title='space-video'
+                            src={photoData.url}
+                            typeof='text/html'
+                            allow='encrypted-media'
+                            frameBorder="0"
+                            gesture='media'
+                            allowFullscreen
+                        />
+                    )
+                };
 
 
                 <div className='nasa-apod-data-text'>
