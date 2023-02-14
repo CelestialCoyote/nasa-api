@@ -75,9 +75,28 @@ const APOD = () => {
             <label className='nasa-apod-title'>
                 Astronomy Picture of the Day
             </label>
+            {/* <div
+                class="form-outline datepicker"
+                data-mdb-toggle-button="true"
+                data-mdb-format="yyyy-mm-dd"
+                id="date-picker"
+            >
+                <input
+                    type="text"
+                    class="form-control"
+                    id="wrapper-date"
+                    data-mdb-toggle="datepicker"
+                    value=""
+                />
+                <label for="exampleDatepicker1" class="form-label"
+                >Select a date</label
+                >
+            </div> */}
             <div>
                 <input
+                    className='nasa-apod-date-picker'
                     type="date"
+                    placeholder='Select a date.'
                     onChange={
                         (e) => {
                             setDate(e.target.value);

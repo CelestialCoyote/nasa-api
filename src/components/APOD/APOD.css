@@ -7,6 +7,13 @@
     padding: 2.0em;
 }
 
+.nasa-apod-date-picker {
+    background-color: gray;
+    color: aqua;
+    height: 2.0em;
+    width: 25.0em;
+}
+
 .nasa-apod-data {
     display: flex;
     flex-direction: row;
